@@ -10,7 +10,7 @@ const Register = () => {
             <h1>
                 here will be a Register form
             </h1>
-            <Link to="login">Login</Link>
+            <Link to="/auth/login">Login</Link>
         </div>
     )
 }

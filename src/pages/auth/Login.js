@@ -10,7 +10,7 @@ const Login = () => {
             <h1>
                 here will be a login form
             </h1>
-            <Link to="register">Register</Link>
+            <Link to="/auth/register">Register</Link>
         </div>
     )
 }
