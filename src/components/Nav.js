@@ -1,14 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
-    return (
-        <nav>
-            <Link to="/">Main</Link>
-            <Link to="/auth/login">Login</Link>
-            <Link to="/auth/register">Register</Link>
-        </nav>
-    )
-}
+  let activeStyle = {
+    fontWeight: "bold",
+  };
 
-export default Nav
+  let inActiveStyle = {
+    textDecoration: "underline dotted",
+  };
+
+  return (
+    <nav>
+      <NavLink
+        to="/"
+        style={({ isActive }) => (isActive ? activeStyle : inActiveStyle)}
+      >
+        Main
+      </NavLink>
+      <NavLink
+        to="/auth/login"
+        style={({ isActive }) => (isActive ? activeStyle : inActiveStyle)}
+      >
+        Login
+      </NavLink>
+      <NavLink
+        to="/auth/register"
+        style={({ isActive }) => (isActive ? activeStyle : inActiveStyle)}
+      >
+        Register
+      </NavLink>
+    </nav>
+  );
+};
+
+export default Nav;

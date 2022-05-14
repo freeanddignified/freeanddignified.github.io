@@ -1,22 +1,23 @@
-import React, {createContext, useMemo, useState} from 'react'
+import React, { createContext, useMemo, useState } from "react";
 
-const AppContext = createContext({})
+const AppContext = createContext({});
 
 const AppProvider = (props) => {
+  const [isUserAuth, setIsUserAuth] = useState(false);
 
-    const [userAuth, setUserAuth] = useState(false)
+  const appDataMemo = useMemo(
+    () => ({
+      isUserAuth,
+      setIsUserAuth,
+    }),
+    [isUserAuth, setIsUserAuth]
+  );
 
-    const appDataMemo = useMemo(() => ({
-        userAuth, setUserAuth
-    }), [
-        userAuth, setUserAuth
-    ])
+  return (
+    <AppContext.Provider value={appDataMemo}>
+      {props.children}
+    </AppContext.Provider>
+  );
+};
 
-    return (
-        <AppContext.Provider value={appDataMemo}>
-            {props.children}
-        </AppContext.Provider>
-    )
-}
-
-export {AppContext, AppProvider}
+export { AppContext, AppProvider };
