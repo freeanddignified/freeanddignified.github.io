@@ -4,12 +4,16 @@ const AppContext = createContext({});
 
 const AppProvider = (props) => {
   const [isUserAuth, setIsUserAuth] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const appDataMemo = useMemo(
     () => ({
-      isUserAuth, setIsUserAuth
+      isUserAuth,
+      setIsUserAuth,
+      userName,
+      setUserName,
     }),
-    [isUserAuth, setIsUserAuth]
+    [isUserAuth, setIsUserAuth, userName, setUserName]
   );
 
   return (
