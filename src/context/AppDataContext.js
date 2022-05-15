@@ -7,8 +7,7 @@ const AppProvider = (props) => {
 
   const appDataMemo = useMemo(
     () => ({
-      isUserAuth,
-      setIsUserAuth,
+      isUserAuth, setIsUserAuth
     }),
     [isUserAuth, setIsUserAuth]
   );
