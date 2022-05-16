@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Box, Container, TextField, Typography } from "@mui/material";
 
@@ -13,18 +14,19 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   // Check credentials in JSON for match
   // Show error & send for Registration, if not matched
   const onSubmit = (setIsUserAuth, setUserName, userCreddentials) => {
     setIsUserAuth(true);
     setUserName(userCreddentials["e-mail"]);
-    console.log(setIsUserAuth, userCreddentials["e-mail"]);
+    navigate("/dashboard")
   };
 
   return (
     <div>
-      <Header></Header>
+      <Header/>
       <Box sx={{ textAlign: "center" }}>
         <AppContext.Consumer>
           {({ isUserAuth, setIsUserAuth, userName, setUserName }) => {
@@ -105,7 +107,7 @@ const Login = () => {
                 >
                   Ще не маєте облікового запису?
                 </Typography>
-                <Link to="/auth/register">Реєстрація</Link>
+                <Link to="/register">Реєстрація</Link>
               </div>
             );
           }}

@@ -1,22 +1,21 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 
 import Main from './pages/Main'
 import Login from "./pages/auth/Login"
 import Register from "./pages/auth/Register"
+import BackOffice from "./pages/backOffice/BackOffice"
 
 const AppRouter = () => {
-  return (
-    <BrowserRouter>
+
+    return (
       <Routes>
         <Route path="/" element={<Main />}/>
-        <Route path="auth">
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-        </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="dashboard" element={ <BackOffice /> } />
       </Routes>
-    </BrowserRouter>
-  );
+    );
 };
 
 export default AppRouter

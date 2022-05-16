@@ -73,20 +73,23 @@ export default function Header() {
         <Menu
             anchorEl={anchorEl}
             anchorOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'right',
             }}
             id={menuId}
             keepMounted
             transformOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'right',
             }}
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem>
+                <Link href="/#/dashboard" underline="none" color="inherit">
+                    Мій кабінет
+                </Link>
+            </MenuItem>
         </Menu>
     );
 
@@ -94,7 +97,7 @@ export default function Header() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Link href="/" sx={{ mr: 2 }} underline="none" color="inherit">
+                    <Link href="/#" sx={{ mr: 2 }} underline="none" color="inherit">
                         Вільні та Гідні
                     </Link>
                     <IconButton
@@ -146,7 +149,7 @@ export default function Header() {
                                 <Button
                                     color="inherit"
                                     sx={{ mr: 2, ml: 2 }}
-                                    href="/auth/register"
+                                    href="/#/register"
                                 >
                                     Реєстрація
                                 </Button>

@@ -103,7 +103,7 @@ const Login = () => {
                 >
                   Вже маєте обліковий запис?
                 </Typography>
-                <Link to="/auth/login">Вхід</Link>
+                <Link to="/login">Вхід</Link>
               </div>
             );
           }}
