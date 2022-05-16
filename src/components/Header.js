@@ -14,6 +14,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import {useContext} from "react";
 import {AppContext} from "../context/AppDataContext";
 import {Button, Link} from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -58,7 +59,9 @@ export default function Header() {
 
     const isMenuOpen = Boolean(anchorEl);
 
-    const {isUserAuth} = useContext(AppContext);
+    const {isUserAuth, setIsUserAuth} = useContext(AppContext);
+
+    const navigate = useNavigate();
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -89,6 +92,13 @@ export default function Header() {
                 <Link href="/#/dashboard" underline="none" color="inherit">
                     Мій кабінет
                 </Link>
+            </MenuItem>
+            <MenuItem onClick={() => {
+                setIsUserAuth(false)
+                navigate("/#")
+                handleMenuClose()
+            }}>
+                Вийти
             </MenuItem>
         </Menu>
     );
