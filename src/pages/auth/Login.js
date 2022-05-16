@@ -74,6 +74,7 @@ const Login = () => {
                     {...register("e-mail", { required: true })}
                   />
                   <TextField
+                    type="password"
                     sx={{ width: "100%", m: "0  0 2rem 0" }}
                     id="outlined-basic"
                     label="пароль"

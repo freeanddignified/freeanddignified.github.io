@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div>
-      <Header></Header>
+      <Header/>
       <Box sx={{ textAlign: "center" }}>
         <AppContext.Consumer>
           {({ isUserAuth, setIsUserAuth, userName, setUserName }) => {
@@ -72,6 +72,7 @@ const Login = () => {
                     {...register("e-mail", { required: true })}
                   />
                   <TextField
+                    type="password"
                     sx={{ width: "100%", m: "0  0 2rem 0" }}
                     id="outlined-basic"
                     label="пароль"
