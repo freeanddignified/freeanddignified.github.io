@@ -7,10 +7,10 @@ const BannerLayout = (props) => {
     return (
         <div className="banner-layout">
             <Banner/>
+            <Banner/>
             <div className="banner-layout-content">
                 {props.children}
             </div>
-            <Banner/>
         </div>
     )
 }

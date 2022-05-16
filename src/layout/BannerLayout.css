@@ -1,21 +1,24 @@
 .banner-layout {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: center;
 }
-.banner-layout > :nth-child(1) {
-    width: 20%;
+.banner-layout .banner {
+    width: calc(20% - 20px);
+    height: calc(100vh - 104px);
+    position: fixed;
+    top: 84px;
 }
-.banner-layout > :nth-child(2) {
+.banner-layout .banner:nth-of-type(1) {
+    left: 20px;
+}
+.banner-layout .banner:nth-of-type(2) {
+    right: 20px;
+}
+.banner-layout .banner-layout-content {
     width: calc(60% - 40px);
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     height: 100%;
-}
-.banner-layout > :nth-child(3) {
-    width: 20%;
 }
