@@ -1,0 +1,16 @@
+.product-slider img {
+    width: 100%;
+    object-fit: fill;
+}
+.product-slider .slick-dots {
+    position: static;
+    margin-top: 20px;
+}
+.product-slider .slick-thumb li {
+    width: 60px;
+    height: 45px;
+}
+/*.product-slider .slick-thumb li  img {*/
+/*    width: 100%;*/
+/*    object-fit: fill;*/
+/*}*/
