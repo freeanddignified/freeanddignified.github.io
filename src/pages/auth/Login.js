@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="page">
       <Header/>
       <Box sx={{ textAlign: "center" }}>
         <AppContext.Consumer>

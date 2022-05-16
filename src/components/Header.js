@@ -104,7 +104,7 @@ export default function Header() {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, position: "fixed", top: 0, left: 0, right: 0, zIndex: '10000' }}>
             <AppBar position="static">
                 <Toolbar>
                     <Link href="/#" sx={{ mr: 2 }} underline="none" color="inherit">
