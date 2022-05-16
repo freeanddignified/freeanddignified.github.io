@@ -4,15 +4,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import {useNavigate} from "react-router-dom";
 
-const ProductCard = (props) => {
+const ProductCard = ({id}) => {
+    const navigate = useNavigate();
+
     return (
-        <Card sx={{ width: '100%' }}>
+        <Card sx={{ width: '100%' }}
+              onClick={() => {
+                  navigate(`/p-${id}`)
+              }}
+        >
             <CardActionArea>
                 <CardMedia
                     component="img"
                     height="140"
-                    image={`https://picsum.photos/200/140?random=${props.id}`}
+                    image={`https://picsum.photos/200/140?random=${id}`}
                     alt="green iguana"
                 />
                 <CardContent>

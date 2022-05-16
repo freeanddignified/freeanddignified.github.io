@@ -2,24 +2,39 @@ export const categoriesData = [
   {
     "categoryId": 1,
     "categoryName": "Одяг та взуття",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 2,
     "categoryName": "Агро та природа",
-    "subCategories": []
-  },
-  {
-    "categoryId": 3,
-    "categoryName": "Традиційні ремесла",
+    "categorySlug": "agro-and-nature",
     "subCategories": [
       {
         "subCategoryId": 1,
-        "subCategoryName": "Українські народні інструменти"
+        "subCategoryName": "Українські народні інструменти",
+        "subCategorySlug": "ukrainian-folk-instruments",
       },
       {
         "subCategoryId": 2,
         "subCategoryName": "Іграшки та оберегі"
+      }
+    ]
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "Традиційні ремесла",
+    "categorySlug": "traditional-crafts",
+    "subCategories": [
+      {
+        "subCategoryId": 1,
+        "subCategoryName": "Українські народні інструменти",
+        "subCategorySubSlug": "ukrainian-folk-instruments"
+      },
+      {
+        "subCategoryId": 2,
+        "subCategoryName": "Іграшки та оберегі",
+        "subCategorySubSlug": "toys-talismans"
       },
       {
         "subCategoryId": 3,
