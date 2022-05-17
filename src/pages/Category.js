@@ -17,13 +17,9 @@ const Category = () => {
     const cat = categories.find(cat => (cat.categorySlug === params.slug))
     const prod = products.filter(prod => {
         if (prod.categories.includes(cat.categoryId)) {
-            console.log('===== DEBUG =====')
-            console.log('we in if',)
             return prod
         }
     })
-    console.log('===== DEBUG =====')
-    console.log('prod',prod)
 
     return (
         <div className="page">
@@ -38,7 +34,7 @@ const Category = () => {
                 </Box>
                 <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2} sx={{width: '100%', justifyItems: 'center', marginBottom: '20px'}}>
                     {cat.subCategories.map((sub, index) => (
-                        <CategoryCard id={sub.subCategoryId} key={index}/>
+                        <CategoryCard key={index} id={sub.subCategoryId} data={sub}/>
                     ))}
                 </Box>
                 <Footer/>

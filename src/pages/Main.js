@@ -27,9 +27,9 @@ const Main = () => {
                 }
             </Box>
             <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2} sx={{width: '100%', justifyItems: 'center', marginBottom: '20px'}}>
-                <CategoryCard id={1}/>
-                <CategoryCard id={2}/>
-                <CategoryCard id={3}/>
+                {categories.map((cat, index) => (
+                    <CategoryCard key={index} data={cat}/>
+                ))}
             </Box>
             <Footer/>
         </BannerLayout>
