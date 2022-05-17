@@ -12,7 +12,7 @@ import Banner from "../components/Banner";
 const AdminLayout = (props) => {
 
   return (
-    <div className="admin-layout">
+    <div className={`admin-layout ${props.bannerOff ? 'admin-layout-without-banner' : ''}`}>
       <Paper className="menu">
         <MenuList>
           <Typography variant="h6" component="h1">

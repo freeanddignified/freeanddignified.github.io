@@ -19,6 +19,10 @@
   top: 84px;
   right: 20px;
 }
+.admin-layout.admin-layout-without-banner .admin-layout-content {
+  width: calc(80% - 1rem);
+  margin: 0 0 0 auto;
+}
 
 .admin-layout .admin-layout-content {
   width: calc(60% - 1rem);

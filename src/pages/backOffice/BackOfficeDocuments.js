@@ -35,4 +35,4 @@ const BackOfficeDocuments = () => {
   )
 };
 
-export default BackOfficeDocuments;
+export default BackOfficeDocuments
