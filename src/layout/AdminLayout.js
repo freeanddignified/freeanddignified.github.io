@@ -10,6 +10,7 @@ import "./AdminLayout.css";
 import Banner from "../components/Banner";
 
 const AdminLayout = (props) => {
+
   return (
     <div className="admin-layout">
       <Paper className="menu">
@@ -49,7 +50,9 @@ const AdminLayout = (props) => {
           </MenuItem>
         </MenuList>
       </Paper>
+      { !props.bannerOff &&
       <Banner />
+      }
       <div className="admin-layout-content">{props.children}</div>
     </div>
   );

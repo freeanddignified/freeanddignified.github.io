@@ -8,6 +8,7 @@ import { AppContext } from "../../context/AppDataContext";
 const BackOffice = () => {
   const renderDefault = useMatch("/dashboard");
   const { isUserAuth } = useContext(AppContext);
+  let match = useMatch('/dashboard/shop')
 
   return (
     <Fragment>
@@ -18,7 +19,7 @@ const BackOffice = () => {
           ) : (
             <div className="page">
               <Header />
-              <AdminLayout>
+              <AdminLayout bannerOff={!!match}>
                 <Outlet></Outlet>
               </AdminLayout>{" "}
             </div>
