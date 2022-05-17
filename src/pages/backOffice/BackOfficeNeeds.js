@@ -1,6 +1,6 @@
 import React from "react";
 
-const BackOfficeNeed = () => {
+const BackOfficeNeeds = () => {
   return <div>Blank textfffff</div>;
 };
 
