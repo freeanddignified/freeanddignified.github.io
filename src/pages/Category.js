@@ -15,15 +15,26 @@ const Category = () => {
     const {categories, products} = useContext(AppContext);
 
     const cat = categories.find(cat => (cat.categorySlug === params.slug))
+    const prod = products.filter(prod => {
+        if (prod.categories.includes(cat.categoryId)) {
+            console.log('===== DEBUG =====')
+            console.log('we in if',)
+            return prod
+        }
+    })
+    console.log('===== DEBUG =====')
+    console.log('prod',prod)
 
     return (
         <div className="page">
             <Header />
             <BannerLayout>
                 <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2} sx={{width: '100%', marginBottom: '20px'}}>
-                    <ProductCard id={1}/>
-                    <ProductCard id={2}/>
-                    <ProductCard id={3}/>
+                    {
+                        prod && prod.length > 0 && prod.map((product, index) => (
+                            <ProductCard key={index} id={product.productId} data={product}/>
+                        ))
+                    }
                 </Box>
                 <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={2} sx={{width: '100%', justifyItems: 'center', marginBottom: '20px'}}>
                     {cat.subCategories.map((sub, index) => (

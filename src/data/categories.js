@@ -17,7 +17,8 @@ export const categoriesData = [
       },
       {
         "subCategoryId": 2,
-        "subCategoryName": "Іграшки та оберегі"
+        "subCategoryName": "Іграшки та оберегі",
+        "subCategorySubSlug": "toys-talismans"
       }
     ]
   },
@@ -89,46 +90,55 @@ export const categoriesData = [
   {
     "categoryId": 4,
     "categoryName": "Мистецтво",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 5,
     "categoryName": "Будівничтво та декор",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 6,
     "categoryName": "Краса та догляд",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 7,
     "categoryName": "Медицина та здоров'я",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 8,
     "categoryName": "Меблі та затишок",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 9,
     "categoryName": "Спорт",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 10,
     "categoryName": "Іграшки та розваги",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 11,
     "categoryName": "Послуги",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 12,
     "categoryName": "Технології",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   }
 ]
