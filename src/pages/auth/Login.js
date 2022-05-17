@@ -1,12 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Box, Container, TextField, Typography } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import Header from "../../components/Header";
 import { AppContext } from "../../context/AppDataContext";
+
+const LinkBehavior = React.forwardRef((props, ref) => {
+  const { href, ...other } = props;
+  return (
+    <RouterLink data-testid="custom-link" ref={ref} to={href} {...other} />
+  );
+});
+
+const theme = createTheme({
+  components: {
+    MuiTextField: { defaultProps: { position: "relative" } },
+    MuiFormHelperText: {
+      styleOverrides: { root: { position: "absolute", bottom: "-1.5rem" } },
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        LinkComponent: LinkBehavior,
+      },
+    },
+  },
+});
 
 const Login = () => {
   const {
@@ -43,7 +65,7 @@ const Login = () => {
                 </span>
               </h2>
             ) : (
-              <div>
+              <ThemeProvider theme={theme}>
                 <Typography
                   variant="h1"
                   sx={{
@@ -107,8 +129,10 @@ const Login = () => {
                 >
                   Ще не маєте облікового запису?
                 </Typography>
-                <Link to="/register">Реєстрація</Link>
-              </div>
+                <Button href="/register" variant="contained">
+                  Реєстрація
+                </Button>
+              </ThemeProvider>
             );
           }}
         </AppContext.Consumer>

@@ -61,7 +61,7 @@
   background-color: #1976d2;
   margin-right: 0;
   color: #fff;
-  border: none;
+  border-color: transparent;
 }
 
 ul .list {
