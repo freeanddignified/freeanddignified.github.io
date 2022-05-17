@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { Button, Box, Container, TextField, Typography } from "@mui/material";
 
@@ -21,12 +21,12 @@ const Login = () => {
   const onSubmit = (setIsUserAuth, setUserName, userCreddentials) => {
     setIsUserAuth(true);
     setUserName(userCreddentials["e-mail"]);
-    navigate("/dashboard")
+    navigate("/dashboard");
   };
 
   return (
     <div className="page">
-      <Header/>
+      <Header />
       <Box sx={{ textAlign: "center" }}>
         <AppContext.Consumer>
           {({ isUserAuth, setIsUserAuth, userName, setUserName }) => {
@@ -55,32 +55,32 @@ const Login = () => {
                 </Typography>
                 <Container
                   maxWidth="xs"
+                  component="form"
                   sx={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                   }}
-                  component="form"
                   onSubmit={handleSubmit((userCreddentials) =>
                     onSubmit(setIsUserAuth, setUserName, userCreddentials)
                   )}
                 >
                   <TextField
-                    sx={{ width: "100%", m: "0  0 2rem 0" }}
+                    type="email"
                     id="outlined-basic"
                     label="e-mail"
                     variant="outlined"
-                    type="email"
+                    sx={{ width: "100%", m: "0  0 2rem 0" }}
                     error={errors["e-mail"] ? true : false}
                     helperText={errors["e-mail"] && "Введіть E-mail адресу"}
                     {...register("e-mail", { required: true })}
                   />
                   <TextField
                     type="password"
-                    sx={{ width: "100%", m: "0  0 2rem 0" }}
                     id="outlined-basic"
                     label="пароль"
                     variant="outlined"
+                    sx={{ width: "100%", m: "0  0 2rem 0" }}
                     error={errors.password ? true : false}
                     helperText={
                       (errors.password?.type === "required" &&
@@ -91,8 +91,8 @@ const Login = () => {
                     {...register("password", { required: true, maxLength: 24 })}
                   />
                   <Button
-                    variant="contained"
                     type="submit"
+                    variant="contained"
                     sx={{ m: "0  0 2rem 0", maxWidth: "10rem" }}
                   >
                     Увійти
@@ -121,6 +121,7 @@ export default Login;
 
 // Apply YUP for improved e-mail validation? -> no for now
 // Put credentials to local storage & compare to content on submit?
+// Add unique IDs to <input>
 
 // Alternative way to exclude Consuner -> local state
 // import { AppContext } from "../context/AppDataContext";
