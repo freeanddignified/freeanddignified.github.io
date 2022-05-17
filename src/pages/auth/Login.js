@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
 import { Button, Box, Container, TextField, Typography } from "@mui/material";
 
@@ -32,11 +31,10 @@ const Login = () => {
           {({ isUserAuth, setIsUserAuth, userName, setUserName }) => {
             return isUserAuth ? (
               <h2>
-                Ви вже увійшли до облікового запису
+                Ви вже увійшли до облікового запису{" "}
                 <span
                   style={{
                     textDecorationLine: "underline",
-                    marginLeft: "1rem",
                   }}
                 >
                   {userName}
