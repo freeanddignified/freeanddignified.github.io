@@ -7,14 +7,17 @@ import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import MenuList from "@mui/material/MenuList";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useContext } from "react";
 import { AppContext } from "../context/AppDataContext";
-import { Button, Link } from "@mui/material";
+import { Button, Link, Drawer } from "@mui/material";
+import ListItemText from "@mui/material/ListItemText";
 import { useNavigate } from "react-router-dom";
+import SubNav from "./SubNav";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -55,13 +58,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Header() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
-
-  const { isUserAuth, setIsUserAuth } = useContext(AppContext);
-
+  const { isUserAuth, setIsUserAuth, categories } = useContext(AppContext);
   const navigate = useNavigate();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const isMenuOpen = Boolean(anchorEl);
+  const [openMenu, setOpenMenu] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpenMenu(newOpen);
+  };
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -74,20 +79,14 @@ export default function Header() {
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
-      sx={{ zIndex: 10001 }}
       anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "right",
-      }}
       id={menuId}
       keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
+      transformOrigin={{ horizontal: "right", vertical: "top" }}
+      anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
+      sx={{ zIndex: "10001" }}
     >
       <MenuItem>
         <Link href="/#/dashboard" underline="none" color="inherit">
@@ -128,9 +127,55 @@ export default function Header() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2, ml: 2 }}
+            onClick={toggleDrawer(true)}
           >
             <MenuIcon />
           </IconButton>
+          <Drawer
+            anchor="left"
+            open={openMenu}
+            onClose={toggleDrawer(false)}
+            ModalProps={{
+              keepMounted: true,
+            }}
+          >
+            <Box
+              role="presentation"
+              sx={{ paddingTop: "84px", minWidth: "300px" }}
+              // onClick={toggleDrawer(false)}
+              // onKeyDown={toggleDrawer(false)}
+            >
+              <MenuList>
+                {categories.map((cat, index) =>
+                  cat.subCategories.length > 0 ? (
+                    <MenuItem key={index}>
+                      <ListItemText
+                        onClick={() => {
+                          navigate(`/c-${cat.categorySlug}`);
+                        }}
+                        primary={cat.categoryName}
+                      />
+
+                      <SubNav
+                        catName={cat.categoryName}
+                        catSlug={cat.categorySlug}
+                        subCategories={cat.subCategories}
+                      />
+                    </MenuItem>
+                  ) : (
+                    <MenuItem
+                      key={index}
+                      onClick={() => {
+                        navigate(`/c-${cat.categorySlug}`);
+                      }}
+                    >
+                      <ListItemText primary={cat.categoryName} />
+                    </MenuItem>
+                  )
+                )}
+              </MenuList>
+            </Box>
+          </Drawer>
           <Search sx={{ flexGrow: 1 }}>
             <SearchIconWrapper>
               <SearchIcon />

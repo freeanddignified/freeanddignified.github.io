@@ -1,0 +1,20 @@
+.one-banner-layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.one-banner-layout .banner {
+    width: calc(20% - 20px);
+    height: calc(100vh - 104px);
+    position: fixed;
+    top: 84px;
+    right: 20px;
+}
+
+.one-banner-layout .one-banner-layout-content {
+    width: calc(80% - 20px);
+    margin: 0 auto 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}

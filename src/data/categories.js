@@ -2,24 +2,40 @@ export const categoriesData = [
   {
     "categoryId": 1,
     "categoryName": "Одяг та взуття",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 2,
     "categoryName": "Агро та природа",
-    "subCategories": []
+    "categorySlug": "agro-and-nature",
+    "subCategories": [
+      {
+        "subCategoryId": 1,
+        "subCategoryName": "Українські народні інструменти",
+        "subCategorySlug": "ukrainian-folk-instruments",
+      },
+      {
+        "subCategoryId": 2,
+        "subCategoryName": "Іграшки та оберегі",
+        "subCategorySubSlug": "toys-talismans"
+      }
+    ]
   },
   {
     "categoryId": 3,
     "categoryName": "Традиційні ремесла",
+    "categorySlug": "traditional-crafts",
     "subCategories": [
       {
         "subCategoryId": 1,
-        "subCategoryName": "Українські народні інструменти"
+        "subCategoryName": "Українські народні інструменти",
+        "subCategorySubSlug": "ukrainian-folk-instruments"
       },
       {
         "subCategoryId": 2,
-        "subCategoryName": "Іграшки та оберегі"
+        "subCategoryName": "Іграшки та оберегі",
+        "subCategorySubSlug": "toys-talismans"
       },
       {
         "subCategoryId": 3,
@@ -74,46 +90,55 @@ export const categoriesData = [
   {
     "categoryId": 4,
     "categoryName": "Мистецтво",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 5,
     "categoryName": "Будівничтво та декор",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 6,
     "categoryName": "Краса та догляд",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 7,
     "categoryName": "Медицина та здоров'я",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 8,
     "categoryName": "Меблі та затишок",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 9,
     "categoryName": "Спорт",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 10,
     "categoryName": "Іграшки та розваги",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 11,
     "categoryName": "Послуги",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   },
   {
     "categoryId": 12,
     "categoryName": "Технології",
+    "categorySlug": "clothes-and-shoes",
     "subCategories": []
   }
 ]

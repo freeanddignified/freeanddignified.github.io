@@ -12,6 +12,9 @@ import BackOfficeNeeds from "./pages/backOffice/BackOfficeNeeds";
 import BackOfficeOpportunities from "./pages/backOffice/BackOfficeOpportunities";
 import BackOfficeDocuments from "./pages/backOffice/BackOfficeDocuments";
 // Need to put multiple files under index.js
+import Category from "./pages/Category";
+import Product from "./pages/Product";
+import SubCategory from "./pages/SubCategory";
 
 const AppRouter = () => {
   return (
@@ -27,6 +30,9 @@ const AppRouter = () => {
         <Route path="opportunities" element={<BackOfficeOpportunities />} />
         <Route path="documents" element={<BackOfficeDocuments />} />
       </Route>
+      <Route path="c-:slug" element={<Category />} />
+      <Route path="s-:slug" element={<SubCategory />} />
+      <Route path="p-:productId" element={<Product />} />
     </Routes>
   );
 };
