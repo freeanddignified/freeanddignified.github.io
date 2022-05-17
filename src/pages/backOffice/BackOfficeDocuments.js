@@ -9,7 +9,7 @@ const BackOfficeDocuments = () => {
 	<a href="#" title="Документ 5">Документ 5</a><br>
 	<a href="#" title="Документ 6">Документ 6</a><br>
 	<a href="#" title="Документ 7">Документ 7</a><br>
-	
+	<a href="#" title="Документ 8">Документ 7</a><br>
 	</frame></div>;
 };
 
