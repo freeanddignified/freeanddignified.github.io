@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b1f72f1.css",
-    "main.js": "/static/js/main.ba17344d.js",
+    "main.css": "/static/css/main.a6ce4b6f.css",
+    "main.js": "/static/js/main.8bbfbf3c.js",
     "static/media/roboto-all-500-normal.woff": "/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
     "static/media/roboto-all-400-normal.woff": "/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
     "static/media/roboto-all-300-normal.woff": "/static/media/roboto-all-300-normal.168d6383e73339293ac3.woff",
+    "static/media/MediaMarktLogo.svg": "/static/media/MediaMarktLogo.3f9c498bf36f81495300b0262990b81f.svg",
     "static/media/roboto-latin-500-normal.woff2": "/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
     "static/media/roboto-latin-400-normal.woff2": "/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
@@ -22,6 +23,7 @@
     "static/media/roboto-cyrillic-700-normal.woff2": "/static/media/roboto-cyrillic-700-normal.d010f1f324e111a22e53.woff2",
     "static/media/roboto-cyrillic-400-normal.woff2": "/static/media/roboto-cyrillic-400-normal.71a33b6b50457b2c903a.woff2",
     "static/media/roboto-cyrillic-300-normal.woff2": "/static/media/roboto-cyrillic-300-normal.1431d1cef06ad04f5458.woff2",
+    "static/media/WalmartLogo.svg": "/static/media/WalmartLogo.92a0e4db1277e8c9a633461fd8b57bf7.svg",
     "static/media/roboto-greek-300-normal.woff2": "/static/media/roboto-greek-300-normal.db2632771401f61463fe.woff2",
     "static/media/roboto-greek-400-normal.woff2": "/static/media/roboto-greek-400-normal.c35e4c3958e209d17b31.woff2",
     "static/media/roboto-greek-500-normal.woff2": "/static/media/roboto-greek-500-normal.9ac81fefbe6c319ea40b.woff2",
@@ -30,7 +32,11 @@
     "static/media/roboto-vietnamese-400-normal.woff2": "/static/media/roboto-vietnamese-400-normal.3230f9b040f3c630e0c3.woff2",
     "static/media/roboto-vietnamese-700-normal.woff2": "/static/media/roboto-vietnamese-700-normal.3425a701027d0699e369.woff2",
     "static/media/roboto-vietnamese-300-normal.woff2": "/static/media/roboto-vietnamese-300-normal.32fc45a3d1e8ea11fabc.woff2",
+    "static/media/AmazonLogo.svg": "/static/media/AmazonLogo.9b3ff5d8e17638105152031a7a0f1d56.svg",
+    "static/media/BestBuyLogo.svg": "/static/media/BestBuyLogo.04d24493c24dc1749753eb04e9fd4fbb.svg",
+    "static/media/EbayLogo.svg": "/static/media/EbayLogo.77eb851042e06dde3a53d2b5e2791c55.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/AllegroLogo.svg": "/static/media/AllegroLogo.985184dfaf8a92e201e0ffaed3b0e039.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/roboto-greek-ext-500-normal.woff2": "/static/media/roboto-greek-ext-500-normal.6fb9cffb1d3e72bf9293.woff2",
@@ -39,11 +45,11 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3b1f72f1.css.map": "/static/css/main.3b1f72f1.css.map",
-    "main.ba17344d.js.map": "/static/js/main.ba17344d.js.map"
+    "main.a6ce4b6f.css.map": "/static/css/main.a6ce4b6f.css.map",
+    "main.8bbfbf3c.js.map": "/static/js/main.8bbfbf3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b1f72f1.css",
-    "static/js/main.ba17344d.js"
+    "static/css/main.a6ce4b6f.css",
+    "static/js/main.8bbfbf3c.js"
   ]
 }
