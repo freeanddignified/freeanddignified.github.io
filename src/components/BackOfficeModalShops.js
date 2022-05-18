@@ -29,8 +29,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={BestBuyLogo}
                     alt="Best Buy"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
@@ -52,8 +51,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={AmazonLogo}
                     alt="Amazon"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
@@ -75,8 +73,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={MediaMarkt}
                     alt="Media Markt"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
@@ -98,8 +95,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={WalmartLogo}
                     alt="Walmart"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
@@ -121,8 +117,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={AllegroLogo}
                     alt="Allegro"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
@@ -144,8 +139,7 @@ const BackOfficeModalShops = () => {
                     height="200"
                     image={EbayLogo}
                     alt="Ebay"
-                    objectFit="contain"
-                    sx={{width: '70%', margin: 'auto'}}
+                    sx={{width: '70%', margin: 'auto', objectFit: "contain"}}
                 />
                 <CardActionArea
                     sx={{
