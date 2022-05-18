@@ -13,7 +13,7 @@ const BackOfficeMainOption = (props) => {
             display: "inline-flex",
             alignItems: "center",
             textTransform: "uppercase",
-            height: "15rem",
+            height: "8rem",
             textAlign: "center",
           }}
         />

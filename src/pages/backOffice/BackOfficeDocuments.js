@@ -6,6 +6,9 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -59,132 +62,56 @@ const BackOfficeDocuments = () => {
       >
           <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
               <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                  <Typography>1. Категорія діяльності</Typography>
+                  <Typography>Документ 1</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
+                  <Stack direction="row" spacing={1}>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                        <InsertDriveFileIcon/>
+                      </IconButton>
+                  </Stack>
               </AccordionDetails>
           </Accordion>
           <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
               <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                  <Typography>2. Рідкатегорія діяльності</Typography>
+                  <Typography>Документ 2</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
+                  <Stack direction="row" spacing={1}>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                  </Stack>
               </AccordionDetails>
           </Accordion>
           <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
               <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                  <Typography>3. Виробничі процеси. Унікальні технології та рецептура</Typography>
+                  <Typography>Документ 3</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-              <AccordionSummary aria-controls="panel5d-content" id="panel4d-header">
-                  <Typography>4. Виробничі процеси. Габаритні машини та автомати</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-              <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-                  <Typography>5. Виробничі процеси. Виробництво за ліцензією</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
-              <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
-                  <Typography>6. Логістичні потужності</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
-              <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
-                  <Typography>7. Сертифікація відповідності</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
-              <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
-                  <Typography>8. Складські потужності</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
-              <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
-                  <Typography>9. Принципи роботи із людським капіталом</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
-              </AccordionDetails>
-          </Accordion>
-          <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
-              <AccordionSummary aria-controls="panel10d-content" id="panel10d-header">
-                  <Typography>10. Сервісна стратегія</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                  <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                      malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                      sit amet blandit leo lobortis eget.
-                  </Typography>
+                  <Stack direction="row" spacing={1}>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                      <IconButton size="large">
+                          <InsertDriveFileIcon/>
+                      </IconButton>
+                  </Stack>
               </AccordionDetails>
           </Accordion>
       </Box>
