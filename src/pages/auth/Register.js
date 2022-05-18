@@ -52,11 +52,10 @@ const Login = () => {
           {({ isUserAuth, setIsUserAuth, userName, setUserName }) => {
             return isUserAuth ? (
               <h2>
-                Ви вже увійшли до облікового запису
+                Ви вже увійшли до облікового запису{" "}
                 <span
                   style={{
                     textDecorationLine: "underline",
-                    marginLeft: "1rem",
                   }}
                 >
                   {userName}
